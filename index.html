@@ -1,0 +1,192 @@
+<meta charset="utf-8">
+<title>Каталог Longrich 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:wght@700&display=swap" rel="stylesheet">
+<style>
+/* Чистый каталог: только товары. Ни кнопок заказа, ни контактов.
+   Листается сверху вниз, у каждой позиции сразу видно всё —
+   номер, фото, обе цены, описание, состав, применение.
+   Светлая тема намеренно одна: это печатный каталог, а не приложение. */
+:root{
+  --page:#ffffff; --ink:#111111; --ink-2:#444444; --ink-3:#6b6b6b;
+  --green:#0b6e4a; --green-d:#064c33; --green-l:#e8f3ee;
+  --rule-2:#e7e7e7; --soft:#f5f6f5;
+  --warn:#7a4a00; --warn-bg:#fdf3e3; --warn-line:#ead9b6;
+  --max:860px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--page);color:var(--ink);
+  font-family:'PT Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
+  font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{margin:0;line-height:1.25;text-wrap:balance}
+:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:18px}
+
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--page);border-bottom:2px solid var(--ink)}
+.top-in{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding-block:14px}
+.title{font-family:'PT Serif',Georgia,serif;font-size:22px;font-weight:700;letter-spacing:-.01em}
+.top .ct{color:var(--ink-3);font-size:16px;margin-left:auto;font-variant-numeric:tabular-nums}
+@media(max-width:560px){.title{font-size:19px}.top .ct{font-size:15px}}
+
+.lead{padding-block:30px 6px;border-bottom:1px solid var(--rule-2)}
+.lead h2{font-family:'PT Serif',Georgia,serif;font-size:clamp(26px,5.4vw,34px);margin-bottom:12px}
+.lead p{color:var(--ink-2);margin:0 0 14px}
+
+.toc{padding-block:26px 30px}
+.toc h3{font-size:16px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);margin-bottom:14px}
+.toc ol{margin:0;padding:0;list-style:none;border-top:1px solid var(--rule-2)}
+.toc li{border-bottom:1px solid var(--rule-2)}
+.toc a{display:flex;align-items:center;gap:12px;padding:14px 4px;text-decoration:none;min-height:54px}
+.toc a:hover{background:var(--soft)}
+.toc .nm{flex:1;font-weight:700;font-size:18px}
+.toc .ct{color:var(--ink-3);font-size:16px;font-variant-numeric:tabular-nums}
+
+.part{padding-top:46px}
+.part-hd{border-top:3px solid var(--ink);padding-top:14px;margin-bottom:6px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.part-hd h2{font-family:'PT Serif',Georgia,serif;font-size:clamp(24px,4.6vw,30px)}
+.part-hd .ct{color:var(--ink-3);font-size:16px;margin-left:auto;font-variant-numeric:tabular-nums}
+.part-note{color:var(--ink-2);margin:0 0 10px;font-size:17px}
+.back{display:inline-block;font-size:15px;color:var(--green-d);text-decoration:none;padding:6px 0;font-weight:700}
+.back:hover{text-decoration:underline}
+
+.good{display:grid;grid-template-columns:300px 1fr;gap:26px;padding-block:32px;border-bottom:1px solid var(--rule-2)}
+@media(max-width:720px){.good{grid-template-columns:1fr;gap:16px;padding-block:26px}}
+.shot{border:1px solid var(--rule-2);border-radius:8px;overflow:hidden;background:#fff;align-self:start}
+.shot img{width:100%;aspect-ratio:1;max-width:100%;object-fit:cover;background:#fff}
+.shot img.fit{object-fit:contain;aspect-ratio:auto}
+.no{display:inline-block;background:var(--ink);color:#fff;font-weight:700;font-size:15px;padding:3px 11px;border-radius:5px;margin-bottom:9px;font-variant-numeric:tabular-nums}
+.no.new{background:var(--green)}
+.good h3{font-size:23px;font-weight:700;margin-bottom:6px;letter-spacing:-.01em}
+.fm{color:var(--ink-3);font-size:17px;margin-bottom:14px}
+.pz{background:var(--green-l);border-radius:9px;padding:13px 16px;margin-bottom:16px}
+.pz .lb{display:block;font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);font-weight:700}
+.pz b{display:block;font-size:27px;color:var(--green-d);line-height:1.2;font-variant-numeric:tabular-nums}
+.pz .pp{display:block;margin-top:9px;padding-top:9px;border-top:1px solid #c8e0d4;font-size:16px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.pz .pp b{display:inline;font-size:19px;color:var(--ink);margin-left:6px}
+.pz span{display:block;font-size:16px;color:var(--ink-2);margin-top:3px;font-variant-numeric:tabular-nums}
+.pz.ask b{font-size:20px}
+.good p{margin:0 0 13px;color:var(--ink-2)}
+.good p.say{color:var(--ink)}
+.good h4{font-size:15px;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-3);margin:20px 0 9px}
+.good ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.good li{position:relative;padding-left:26px;color:var(--ink-2);font-size:17.5px}
+.good li::before{content:'—';position:absolute;left:0;top:0;color:var(--green)}
+.heed{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:9px;padding:12px 15px;font-size:16.5px;color:var(--warn);margin-top:16px}
+.heed b{color:#5e3800}
+
+.end{padding-block:36px;border-top:3px solid var(--ink);margin-top:42px}
+.fine{font-size:16px;color:var(--ink-3)}
+.foot{padding-block:20px 34px;color:var(--ink-3);font-size:15px;border-top:1px solid var(--rule-2)}
+
+@media print{
+  .top,.toc,.back{display:none!important}
+  body{font-size:11pt;background:#fff}
+  .good{break-inside:avoid;page-break-inside:avoid;grid-template-columns:150px 1fr;padding-block:14px}
+  .part{break-before:page;page-break-before:always}
+  .pz{background:#f0f0f0}
+  a{text-decoration:none;color:#000}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+
+<header class="top">
+  <div class="wrap top-in">
+    <div class="title">Каталог Longrich 2026</div>
+    <div class="ct" id="top-count"></div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="lead" id="top">
+    <h2>Вся продукция Longrich одним списком</h2>
+    <p>У каждой позиции свой номер — по нему удобно ссылаться на товар. Для каждого указаны клиентская и партнёрская цена, состав и способ применения.</p>
+  </section>
+
+  <nav class="toc" aria-label="Содержание">
+    <h3>Содержание</h3>
+    <ol id="toc"></ol>
+  </nav>
+
+  <main id="body"></main>
+
+  <section class="end">
+    <p class="fine">Продукция не является лекарственным средством и не заменяет назначения врача. Описания, состав и цены приведены по официальному каталогу производителя. Перед применением биологически активных добавок проконсультируйтесь со специалистом.</p>
+  </section>
+
+  <footer class="foot">© <span id="yr"></span> Каталог продукции Longrich</footer>
+
+</div>
+
+<script src="data.js"></script>
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
+const money=n=>n.toLocaleString('ru-RU').replace(/ /g,' ')+' ₸';
+const plural=(n,a,b,c)=>{const x=n%10,y=n%100;return x===1&&y!==11?a:x>=2&&x<=4&&(y<10||y>=20)?b:c};
+
+if(typeof PRODUCTS==='undefined'){
+  $('#body').innerHTML='<p style="padding:40px 0">Каталог не загрузился. Обновите страницу.</p>';
+}else build();
+
+function build(){
+  $('#yr').textContent=new Date().getFullYear();
+  $('#top-count').textContent=`${PRODUCTS.length} ${plural(PRODUCTS.length,'товар','товара','товаров')}`;
+
+  let n=0;
+  const parts=[], toc=[];
+
+  for(const c of CATEGORIES){
+    const items=PRODUCTS.filter(p=>p.cat===c.id);
+    if(!items.length)continue;
+    const count=`${items.length} ${plural(items.length,'товар','товара','товаров')}`;
+    toc.push(`<li><a href="#s-${c.id}"><span class="nm">${esc(c.title)}</span><span class="ct">${count}</span></a></li>`);
+    parts.push(`<section class="part" id="s-${c.id}">
+      <div class="part-hd"><h2>${esc(c.title)}</h2><span class="ct">${count}</span></div>
+      <p class="part-note">${esc(c.desc)}</p>
+      <a class="back" href="#top">↑ к содержанию</a>
+      ${items.map(p=>good(p,++n)).join('')}
+    </section>`);
+  }
+
+  $('#toc').innerHTML=toc.join('');
+  $('#body').innerHTML=parts.join('');
+  $('#body').querySelectorAll('.shot img').forEach(i=>{
+    const go=()=>{const r=i.naturalWidth/i.naturalHeight;if(r<0.82||r>1.45)i.classList.add('fit')};
+    i.complete&&i.naturalWidth?go():i.addEventListener('load',go,{once:true});
+  });
+}
+
+function good(p,n){
+  const tag=p.isNew?`<span class="no new">№ ${n} · новинка</span>`:`<span class="no">№ ${n}</span>`;
+  let price;
+  if(p.price){
+    price=`<div class="pz"><span class="lb">Клиентская цена</span><b>${money(p.price)}</b>`
+        + (p.repeat?`<span class="pp">Партнёрская цена:<b>${money(p.repeat)}</b></span>`:'')
+        + `</div>`;
+  }else{
+    price='<div class="pz ask"><b>Цена по запросу</b></div>';
+  }
+  return `<article class="good" id="p-${p.id}">
+    <div class="shot"><img src="img/${p.img}" alt="${esc(p.name)}" loading="lazy"></div>
+    <div>
+      ${tag}
+      <h3>${esc(p.name)}</h3>
+      ${p.size?`<div class="fm">${esc(p.size)}</div>`:''}
+      ${price}
+      <p class="say">${esc(p.short)}</p>
+      ${p.benefits?.length?`<h4>Чем полезен</h4><ul>${p.benefits.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}
+      ${p.composition?`<h4>Состав</h4><ul>${p.composition.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}
+      ${p.usage?`<h4>Как принимать</h4><p>${esc(p.usage)}</p>`:''}
+      ${p.more?`<h4>Подробнее</h4><p>${esc(p.more)}</p>`:''}
+      ${p.warning?`<div class="heed"><b>Предупреждение.</b> ${esc(p.warning)}</div>`:''}
+    </div>
+  </article>`;
+}
+</script>
